@@ -1,6 +1,4 @@
-/* ===================================================
-   RESET & ESTILOS BASE (Módulos Base CSS)
-   =================================================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +16,7 @@ body {
   min-height: 100vh;
 }
 
-/* Título superior para darle presentación al trabajo */
+
 h1 {
   margin-bottom: 25px;
   font-size: 1.8rem;
@@ -26,9 +24,7 @@ h1 {
   text-align: center;
 }
 
-/* ===================================================
-   CONTENEDOR PRINCIPAL Y CAJAS (CSS Grid & Flexbox)
-   =================================================== */
+
 .layout-container {
   display: grid;
   gap: 15px;
@@ -40,7 +36,7 @@ h1 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* Estilos de las tarjetas/cajas */
+
 .box {
   display: flex;
   align-items: center;
@@ -53,40 +49,38 @@ h1 {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Efecto hover suave al pasar el cursor */
 .box:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* Paleta de Colores Pastel Suaves */
 .box-a {
-  background-color: #ffdae0; /* Rosa Pastel */
+  background-color: #ffdae0; 
   border: 2px solid #f8b4be;
   grid-area: a;
 }
 
 .box-b {
-  background-color: #d0f4de; /* Verde Menta Pastel */
+  background-color: #d0f4de; 
   border: 2px solid #a3e4be;
   grid-area: b;
 }
 
 .box-c {
-  background-color: #e2d4f9; /* Lavanda / Morado Pastel */
+  background-color: #e2d4f9; 
   border: 2px solid #c2a8f3;
   grid-area: c;
 }
 
 .box-d {
-  background-color: #cdeac0; /* Verde Lima Suave Pastel */
+  background-color: #cdeac0; 
   border: 2px solid #a8db93;
   grid-area: d;
 }
 
 
 /* ===================================================
-   1. MOBILE FIRST (Layout por defecto)
+   1. MOBILE 
    =================================================== */
 .layout-container {
   grid-template-columns: 1fr;
@@ -99,7 +93,7 @@ h1 {
 
 
 /* ===================================================
-   2. TABLET (Desde 600px de ancho)
+   2. TABLET 
    =================================================== */
 @media (min-width: 600px) {
   .layout-container {
@@ -112,7 +106,7 @@ h1 {
 
 
 /* ===================================================
-   3. DESKTOP (Desde 900px de ancho)
+   3. DESKTOP 
    =================================================== */
 @media (min-width: 900px) {
   .layout-container {
