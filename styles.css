@@ -1,0 +1,124 @@
+/* ===================================================
+   RESET & ESTILOS BASE (Módulos Base CSS)
+   =================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #4a4a4a;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Título superior para darle presentación al trabajo */
+h1 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #5a6b7c;
+  text-align: center;
+}
+
+/* ===================================================
+   CONTENEDOR PRINCIPAL Y CAJAS (CSS Grid & Flexbox)
+   =================================================== */
+.layout-container {
+  display: grid;
+  gap: 15px;
+  width: 100%;
+  max-width: 850px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos de las tarjetas/cajas */
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4a4a4a;
+  border-radius: 12px;
+  min-height: 110px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover suave al pasar el cursor */
+.box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Paleta de Colores Pastel Suaves */
+.box-a {
+  background-color: #ffdae0; /* Rosa Pastel */
+  border: 2px solid #f8b4be;
+  grid-area: a;
+}
+
+.box-b {
+  background-color: #d0f4de; /* Verde Menta Pastel */
+  border: 2px solid #a3e4be;
+  grid-area: b;
+}
+
+.box-c {
+  background-color: #e2d4f9; /* Lavanda / Morado Pastel */
+  border: 2px solid #c2a8f3;
+  grid-area: c;
+}
+
+.box-d {
+  background-color: #cdeac0; /* Verde Lima Suave Pastel */
+  border: 2px solid #a8db93;
+  grid-area: d;
+}
+
+
+/* ===================================================
+   1. MOBILE FIRST (Layout por defecto)
+   =================================================== */
+.layout-container {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d";
+}
+
+
+/* ===================================================
+   2. TABLET (Desde 600px de ancho)
+   =================================================== */
+@media (min-width: 600px) {
+  .layout-container {
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas:
+      "a a d"
+      "b c d";
+  }
+}
+
+
+/* ===================================================
+   3. DESKTOP (Desde 900px de ancho)
+   =================================================== */
+@media (min-width: 900px) {
+  .layout-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "a b c"
+      "d d d";
+  }
+}
